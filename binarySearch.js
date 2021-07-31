@@ -1,17 +1,17 @@
-function binarySearch(arr, val){
+function binarySearch(arr, val) {
   let left = 0
   let right = arr.length-1
 
-  while(left<right){
-      let middle = Math.round((right+left)/2)
-      if(arr[left]===val) return left
-      if(arr[right]===val) return right
-      if(arr[middle]===val) return middle
-      if(arr[middle]>val){
-          right = middle
-      } else {
-          left = middle
-      }
+  while(left<right) {
+		let middle = Math.round((right+left)/2)
+		if(arr[left]===val) return left
+		if(arr[right]===val) return right
+		if(arr[middle]===val) return middle
+		if(arr[middle]>val){
+			right = middle
+		} else {
+			left = middle
+		}
   }
   return -1
 }
