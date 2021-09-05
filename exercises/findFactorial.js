@@ -1,11 +1,11 @@
-function findFactorialRecursive(num) {
+function findFactorialRecursive(num) { // O(n)
   if (num <= 2) {
     return num;
   }
   return num * findFactorialRecursive(num - 1);
 }
 
-function findFactorialIterative(num) {
+function findFactorialIterative(num) { // O(n)
   let answer = num;
   for (var i = 1; i < num; i++) {
     answer = answer * (num - i);
