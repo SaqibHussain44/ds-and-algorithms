@@ -1,0 +1,9 @@
+*
+!*.cpp
+!*.js
+!*.js
+!*.json
+!*exercises
+!*.txt
+!*graphs
+!.gitignore
