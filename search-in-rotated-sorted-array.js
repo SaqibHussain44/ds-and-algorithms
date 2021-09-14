@@ -23,7 +23,7 @@ function pivotedBinarySearch( arr, n, key) {
   let pivot = findPivot(arr, 0, n - 1);
 
   if (pivot == -1) return binarySearch(arr, 0, n - 1, key);
-  
+
   if (arr[pivot] == key)  return pivot;
 
   if (arr[0] <= key) {

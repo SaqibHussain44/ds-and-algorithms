@@ -50,5 +50,5 @@ queue.enqueue('Matt');
 queue.enqueue('Samir');
 queue.enqueue('Pavel');
 queue.dequeue();
-queue.dequeue();
+// queue.dequeue();
 console.log(queue.peek())

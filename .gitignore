@@ -4,6 +4,7 @@
 !*.js
 !*.json
 !*exercises
+!*sorting
 !*.txt
 !*graphs
 !.gitignore
