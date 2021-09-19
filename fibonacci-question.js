@@ -11,9 +11,10 @@
 
 function fibonacciReplaced(limit) {
   const list = [];
-  const fibSequence = { 0: true };
-  let left = 0, right = 1;
-  for (let i = 0; i < limit; i++) {
+  const fibSequence = { };
+  let left = 1, right = 1;
+  fibSequence[right] = true;
+  for (let i = 1; i <= limit; i++) {
     if (fibSequence[i]) {
       list.push(-1);
     } else {
@@ -28,4 +29,4 @@ function fibonacciReplaced(limit) {
 }
 
 console.log('fibSequence', '0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377');
-console.log(fibonacciReplaced(5));
+console.log(fibonacciReplaced(21));
