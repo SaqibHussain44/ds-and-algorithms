@@ -118,6 +118,55 @@ class BinarySearchTree {
       }
     }
   }
+
+  breadthFirstSearch() {
+    let currentNode = this.root;
+    let list = [];
+    let queue = [];
+
+    queue.push(currentNode);
+    while (queue.length > 0) {
+      currentNode = queue.shift();
+      console.log('currentNode', currentNode.value);
+      list.push(currentNode.value);
+      if (currentNode.left) {
+        queue.push(currentNode.left);
+      }
+      if (currentNode.right) {
+        queue.push(currentNode.right);
+      }
+    }
+    return list;
+  }
+
+  breadthFirstSearchFind(x) {
+    let currentNode = this.root;
+    let list = [];
+    let queue = [];
+    let found = null;
+    queue.push(currentNode);
+    while (queue.length > 0 && found === null) {
+      currentNode = queue.shift();
+      if (currentNode.value === x) {
+        found = currentNode;
+      }
+      list.push(currentNode.value);
+      if (currentNode.left) {
+        queue.push(currentNode.left);
+      }
+      if (currentNode.right) {
+        queue.push(currentNode.right);
+      }
+    }
+    return found;
+  }
+}
+
+function traverse(node) {
+  const tree = { value: node.value };
+  tree.left = node.left === null ? null : traverse(node.left);
+  tree.right = node.right === null ? null : traverse(node.right);
+  return tree;
 }
 
 //          9
@@ -134,15 +183,6 @@ tree.insert(170);
 tree.insert(15);
 tree.insert(1);
 
-tree.remove(15);
+// console.log(tree.breadthFirstSearch());
+console.log(tree.breadthFirstSearchFind(4));
 
-console.log(JSON.stringify(traverse(tree.root)));
-
-function traverse(node) {
-  const tree = { value: node.value };
-  tree.left = node.left === null ? null : traverse(node.left);
-  tree.right = node.right === null ? null : traverse(node.right);
-  return tree;
-}
-
-console.log('lookup', tree.lookup(15));
