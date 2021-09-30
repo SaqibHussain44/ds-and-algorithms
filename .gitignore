@@ -7,5 +7,6 @@
 !*sorting
 !*.txt
 !*graphs
+!*dynamicProgramming
 !*searches
 !.gitignore
